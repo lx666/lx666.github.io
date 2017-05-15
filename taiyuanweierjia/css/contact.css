@@ -1,0 +1,38 @@
+.protype{
+    width: 1200px;
+    height: 100px;
+    margin: 0 auto;
+    position: relative;
+    background: #650c7a;
+    overflow: hidden;
+}
+.protype ul li a{
+    color: #3f084d;
+    display: inline-block;
+}
+.protype ul li{
+    width: 120px;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right:0;
+    top:0;
+    bottom: 0;
+    margin: auto;
+}
+.middle{
+    color: #e8b2f9;
+    line-height: 32px;
+    font-size: 14px;
+    /*text-indent: 24px;*/
+    /*width: 1132px;*/
+    margin: 0 auto;
+    background: #650c7a;
+    padding: 0px 34px 130px 34px;
+}
+.ditu{
+    width: 800px;
+    height: 400px;
+    background: url('../img/ditu.png') center center no-repeat;
+    background-size: 100%;
+}

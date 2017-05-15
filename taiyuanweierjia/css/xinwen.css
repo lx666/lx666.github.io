@@ -1,0 +1,47 @@
+
+	.protype{
+		overflow: hidden;
+	}
+	.xinwen-con{
+		width: 1200px;
+		overflow: hidden;
+		padding: 0 15px;
+		background: #650c7a;
+		margin: 0 auto;
+		padding-bottom: 151px;
+	}
+	.xinwen-con ul li{
+		width: 552px;
+		height: 159px;
+		margin-left: 22px;
+		padding-left: 10px;
+		float: left;
+		border-bottom: 1px solid #e8b2f9;
+	}
+	.news-left{
+		width: 147px;
+		height: 133px;
+		float: left;
+		padding-top: 22px;
+		margin-right: 12px;
+	}
+	.news-left img{
+		width: 100%;
+		height: 100%;
+	}
+	.news-right{
+		width: 367px;
+		float: left;
+		overflow: hidden;
+		font-size: 14px;
+		padding-top: 22px;
+		line-height: 24px;
+		color: #e8b2f9;
+	}
+	.new-title{
+		width: 100%;
+		font-size: 16px;
+		color: #fff;
+		line-height: 32px;
+		padding-top: 10px;
+	}

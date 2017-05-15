@@ -1,0 +1,132 @@
+	.message-con-left{
+			width: 356px;
+			padding-top: 10px;
+			height: 460px;
+			background: url('../img/gbook1.jpg') 100% 100% no-repeat;
+			float: left;
+			
+		}
+		.rig2{
+			width: 780px;
+			height: 86px;
+			border-bottom:1px dashed #fff;
+			background: url('../img/gbook2.jpg') no-repeat center center;
+		}
+		.rig3{
+			width: 618px;
+			overflow: hidden;
+			height: 100px;
+			margin: 0 auto;
+			margin-top: 40px;
+		}
+		.form-first{
+			width: 100%;
+			overflow: hidden;
+			/*background: yellow;*/
+		}
+		.in1 input{
+			width: 286px;
+			height: 30px;
+			padding-left: 12px;
+			border-radius: 5px;
+			font-size: 14px;
+			background: #e8b2f9;
+			color: #650c7a;
+			position: relative;
+			left: 0;
+			float: left;
+			border: 0;
+		}
+	    .in2 input{
+			width: 286px;
+			height: 30px;
+			padding-left: 12px;
+			border-radius: 5px;
+			font-size: 14px;
+			background: #e8b2f9;
+			color: #650c7a;
+			float: right;
+			border: 0;
+		}
+	.in3 input{
+		width: 286px;
+		height: 30px;
+		padding-left: 12px;
+		border-radius: 5px;
+		font-size: 14px;
+		background: #e8b2f9;
+		color: #650c7a;
+		position: relative;
+		left: 0;
+		top:20px;
+		float: left;
+		border: 0;
+	}
+	.in4 input{
+		width: 286px;
+		height: 30px;
+		padding-left: 12px;
+		border-radius: 5px;
+		font-size: 14px;
+		background: #e8b2f9;
+		color: #650c7a;
+		float: right;
+		position: relative;
+		right: 0;
+		top:20px;
+		outline: none;
+		border: 0;
+	}
+	.right4{
+		overflow: hidden;
+		width: 100%;
+		height: 158px;
+		position: relative;
+	}
+	.in5 textarea{
+		width: 618px;
+		height: 158px;
+		background: #e8b2f9;
+		color: #650c7a;
+		border: 0;
+		border-radius: 5px;
+		font-size: 14px;
+		line-height: 20px;
+		text-indent: 18px;
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin: auto;
+		padding-top: 12px;
+	}
+	.right5{
+		width: 618px;
+		height: 70px;
+		overflow: hidden;
+		margin-top: 20px;
+		position: relative;
+	}
+	#sub{
+		outline: none;
+		position: absolute;
+		left:300px;
+		top:0;
+		bottom:0;
+		width: 68px;
+		height: 68px;
+		border: 0;
+		background: url('../img/sub.png') no-repeat;
+		cursor: pointer;
+	}
+	#res{
+		outline: none;
+		position: absolute;
+		right: 150px;
+		top:0;
+		bottom:0;
+		width: 68px;
+		height: 68px;
+		border: 0;
+		background: url('../img/res.png') no-repeat;
+		cursor: pointer;
+	}

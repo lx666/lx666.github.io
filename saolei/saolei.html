@@ -1,0 +1,414 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            var time=0;
+            var mt;
+            var num = 10;
+            var bili=0.9;
+            var leis=10;
+           var bestScore=localStorage.bestScore?JSON.parse(localStorage.bestScore):[];
+            $(".start").click(function () {
+                $(".mask").hide();
+                mt=setInterval(times,1000);
+                creatLei();
+            });
+            $(".guan").on("click",".guanqa li  span",function (e) {
+                var target=e.target;
+                if($(target).html()=="简单"){
+                    leis=10;
+                    num=10;
+                    bili=0.9;
+                    $(".mask").hide();
+                    $(".scene").empty();
+                    creatLei();
+                    $("time span").html(0);
+                    time=0;
+                    clearInterval(mt);
+                    mt=setInterval(times,1000);
+                    $(".flagnum").html("flag:"+num);
+                }
+                if($(target).html()=="一般"){
+                    leis=15;
+                    num=15;
+                    bili=0.85;
+                    $(".mask").hide();
+                    $(".scene").empty();
+                    creatLei();
+                    $("time span").html(0);
+                    time=0;
+                    clearInterval(mt);
+                    mt=setInterval(times,1000);
+                    $(".flagnum").html("flag:"+num);
+                }
+                if($(target).html()=="困难"){
+                    bili=0.8;
+                    leis=20;
+                    num=20;
+                    $(".mask").hide();
+                    $(".scene").empty();
+                    creatLei();
+                    $("time span").html(0);
+                    time=0;
+                    clearInterval(mt);
+                    mt=setInterval(times,1000);
+                    $(".flagnum").html("flag:"+num);
+                }
+            });
+            $(".guan").click(function(){
+                $(".guanqa").slideToggle();
+            })
+            $(".paihang").click(function () {
+                $(".pai")
+                .slideToggle();
+                getPai();
+            })
+            $(".restart").click(function () {
+                $(".mask").hide();
+                $(".scene").empty();
+                creatLei();
+                $("time span").html(0);
+                time=0;
+                clearInterval(mt);
+                mt=setInterval(times,1000);
+                $(".flagnum").html("flag:"+leis);
+            })
+            function times(){
+                time++;
+                $("time span").html(time);
+            }
+            function creatLei() {
+                do {
+                    $(".scene").empty();
+                    for (var i = 0; i < 10; i++) {  //这样写两次循环方便找坐标
+                        for (var j = 0; j < 10; j++) {
+                            var isLei = Math.random() > bili;
+                            $("<div>")
+                                    .addClass(function () {
+                                        if (isLei) {
+                                            return "block lei";
+                                        } else {
+                                            return "block";
+                                        }
+                                    })
+                                    .attr("id", i + "-" + j)//变量id取坐标
+                                    .data("pos", {x: i, y: j})
+                                    .mousedown(mousedownEvent)
+                                    .appendTo(".scene");  //创建一个div添加类名block加入到场景里
+                        }
+                    }
+                } while ($(".lei").length != leis);
+            }
+            creatLei();
+            function mousedownEvent(e) {   //左击右击事件
+                if (e.which == 1) {  //左击
+                    leftclick.call(this);
+                } else {
+                    rightclick.call(this);
+                }
+            }
+
+            function leftclick() {
+                if ($(this).hasClass("lei")) {
+                    $(".lei").addClass("show");
+                    alert(`游戏结束,用时${time}s`);
+                    clearInterval(mt);
+                    $(".scene div").unbind("mousedown");
+                } else {
+                    $(this).addClass("num");
+                    var pos = $(this).data("pos");
+                    var n = 0;
+                    /*                    if($("#"+(pos.x-1)+"-"+(pos.y-1)).hasClass("lei")){
+                     n++;
+                     }
+                     if($("#"+(pos.x-1)+"-"+(pos.y)).hasClass("lei")){
+                     n++;
+                     }
+                     if($("#"+(pos.x-1)+"-"+(pos.y+1)).hasClass("lei")){
+                     n++;
+                     }
+                     if($("#"+(pos.x)+"-"+(pos.y-1)).hasClass("lei")){
+                     n++;
+                     }
+                     if($("#"+(pos.x)+"-"+(pos.y)).hasClass("lei")){
+                     n++;
+                     }
+                     if($("#"+(pos.x)+"-"+(pos.y+1)).hasClass("lei")){
+                     n++;
+                     }
+                     if($("#"+(pos.x+1)+"-"+(pos.y-1)).hasClass("lei")){
+                     n++;
+                     }
+                     if($("#"+(pos.x+1)+"-"+(pos.y)).hasClass("lei")){
+                     n++;
+                     }
+                     if($("#"+(pos.x+1)+"-"+(pos.y+1)).hasClass("lei")){
+                     n++;
+                     }*/
+                    for (var i = pos.x - 1; i <= pos.x + 1; i++) {
+                        for (var j = pos.y - 1; j <= pos.y + 1; j++) {
+                            if ($("#" + i + "-" + j).hasClass("lei")) {
+                                n++;
+                            }
+                        }
+                    }
+                    $(this).html(n);
+                    if (n == 0) {
+                        for (var i = pos.x - 1; i <= pos.x + 1; i++) {
+                            for (var j = pos.y - 1; j <= pos.y + 1; j++) {
+                                var obj = $("#" + i + "-" + j);
+                                if (obj.length == 1) {
+                                    if (!obj.hasClass("num")) {
+                                        leftclick.call(obj[0]);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            function rightclick() {
+                if ($(this).hasClass("num")) {
+                    return;
+                }
+                if ($(this).hasClass("flag")) {
+                    $(this).removeClass("flag");
+                    num++;
+                } else {
+                    num--;
+                    if (num < 0) {
+                        num++;
+                        alert("选择错误");
+                        return;
+                    }
+                    $(this).addClass("flag");
+                    if (num == 0) {
+                        if ($(".flag").filter(".lei").length == leis) {
+                            alert(`扫雷成功,用时${time}s`);
+                            var player=prompt("请输入姓名:");
+                            bestScore.push({player,score:$("time span").html()});
+                            bestScore.sort(function (a,b) {
+                                var score1=parseInt(a.score);
+                                var score2=parseInt(b.score);
+                                if(score1>score2){
+                                    return 1;
+                                }else{
+                                    return -1;
+                                }
+                            })
+                            localStorage.bestScore=JSON.stringify(bestScore);
+                            getPai();
+                        }
+                    }
+                }
+                $(".flagnum").html("flag:" + num);
+            }
+            function getPai() {
+                var str="";
+                for(var i=0;i<bestScore.length;i++){
+                    str+="<li><span>"+bestScore[i].player+"</span><span>"+bestScore[i].score+"</span></li>"
+                }
+                $("ul.pai").html("<li><span>姓名</span><span>用时</span></li>").html(str);
+            }
+            $(document).on("contextmenu", function (e) {  //阻止浏览器本身右击事件
+                e.preventDefault();
+            });
+            /*$(".control div").hover(function () {
+              $(this).animate({width:120,height:100},500)
+            },function () {
+                $(this).animate({width:100,height:80},500)
+            })*/
+        })
+    </script>
+    <style>
+        .box{
+            width: 1000px;
+            height: 500px;
+            background: url('bg.jpg') center center no-repeat;
+            background-size: 1000px 500px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .scene {
+            width: 400px;
+            height: 300px;
+            border-top: 1px solid #25b2fe;
+            border-left: 1px solid #25b2fe;
+            user-select: none;
+            position: absolute;
+            left: 163px;
+            top:100px;
+        }
+        .block {
+            width: 39px;
+            height: 29px;
+            background: #fff;
+            border-right: 1px solid #25b2fe;
+            border-bottom: 1px solid #25b2fe;
+            float: left;
+            cursor: pointer;
+        }
+
+        .control {
+            width: 300px;
+            height: auto;
+            position: fixed;
+            right: 0;
+            top:20px;
+        }
+        .control>div{
+            text-align: center;
+            width: 100px;
+            height:80px;
+            background: #3CB4FF;
+            border-radius: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            line-height: 80px;
+            font-weight: 600;
+            color: #fff;
+            cursor: pointer;
+        }
+        .control time{
+            display: block;
+            color: #fff;
+            width: 100px;
+            height: 80px;
+            background: #3CB4FF;
+            border-radius: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            line-height: 80px;
+            font-weight: 600;
+            text-align: center;
+        }
+        .mask{
+            width: 1000px;
+            height: 500px;
+            background: rgba(0,0,0,0.2);
+            text-align: center;
+            margin: 0 auto;
+            line-height: 500px;
+            font-size: 48px;
+            color: #3CB4FF;
+            cursor: pointer;
+            position: relative;
+            z-index: 10;
+        }
+        .show {
+            background: url('xiaoxin.png') center center no-repeat;
+            background-size: 39px 29px;
+        }
+
+        .num {
+            color: #000;
+            text-align: center;
+            line-height: 29px;
+            font-weight: 600;
+        }
+        .flag {
+            background: url('xiaoqi2.jpg') center center no-repeat;
+            background-size: 78px 58px;
+        }
+        .control>.paihang{
+            position: relative;
+        }
+        ul{
+            list-style: none;
+            padding: 0;
+        }
+        ul.pai{
+            position: absolute;
+            width: 200px;
+            height: auto;
+            /*background: url('start.jpg') center center no-repeat;
+            background-size: 600px 500px;*/
+            top:80px;
+            left: -70px;
+            margin: auto;
+            background: #fff;
+            border: 1px dashed #3CB4FF;
+            text-align: center;
+            line-height: 20px;
+            color:#3CB4FF ;
+            font-size: 20px;
+            display: none;
+        }
+        .control>.guan>.guanqa{
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            left: -120px;
+            top:180px;
+            margin: auto;
+            text-align: center;
+            overflow: hidden;
+            padding: 0px;
+            display: none;
+            z-index: 100;
+        }
+        .control>.guan>.guanqa>li{
+            text-align: center;
+            width: 100px;
+            height:80px;
+            background: #3CB4FF;
+            border-radius: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            line-height: 80px;
+            font-weight: 600;
+            color: #fff;
+            cursor: pointer;
+
+        }
+        ul.pai li{
+            border-bottom: 1px solid #3CB4FF;
+        }
+        ul.pai li span{
+            display: inline-block;
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="mask">
+        <div class="start">开始游戏</div>
+    </div>
+    <div class="scene"></div>
+    <div class="control">
+        <time>用时 <span>0</span>秒</time>
+        <div class="flagnum">flag:10</div>
+        <div class="restart">重新开始</div>
+        <div class="guan">关卡选择
+            <ul class="guanqa">
+                <li>
+                    <div class="g"></div>
+                    <span>简单</span>
+                </li>
+                <li>
+                    <div class="g"></div>
+                    <span>一般</span>
+                </li>
+                <li>
+                    <div class="g"></div>
+                    <span>困难</span>
+                </li>
+            </ul>
+        </div>
+        <div class="paihang">排行榜
+            <ul class="pai">
+                <li>
+                    <span>姓名</span>
+                    <span>用时</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>
