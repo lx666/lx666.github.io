@@ -1,0 +1,27 @@
+        .bianzi{
+        	width: 500px;
+        	overflow: hidden;
+        	margin: 0 auto;
+        }
+        .souga{
+        	text-align: center;
+        }
+		.bianzi span{
+			text-align: center;
+			font-size: 48px;
+			font-weight: 700;
+			display: inline-block;
+			position: relative;
+
+		}
+		.bianzi span:before{
+			content: attr(data-content);
+			display: inline-block;
+			color: red;
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 50%;
+			overflow: hidden;
+
+		}
