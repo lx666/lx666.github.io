@@ -160,7 +160,7 @@ header{
 }
 .content1{
 	width: 100%;
-	height: auto;
+	height: 100%;
 	overflow: hidden;
 }
 
@@ -170,25 +170,26 @@ header{
 	background: #fff;
 	margin: 0 auto;
 	overflow: hidden;
+	height: 100%;
 }
 .content1-main-top{
 	width: 100%;
 	max-width: 1200px;
-	height: 370px;
-	margin-bottom: 10px;
+	height: 40%;
+	overflow: hidden;
+	/* margin-bottom: 5px; */
 	background: #fff;
 	position: relative;
-
 }
 .content1-main-top-left{
-	width: 250px;
-	height: 250px;
+	width: 150px;
+	height: 150px;
 	border-radius: 50%;
 	float: left;
 	background: #fff;
     position: absolute;
-    left: 45px;
-    top: 65px;
+    left: 60px;
+    /* top: 50px; */
     margin: 0 auto ;
    background-image: url('../img/Tulips.jpg');
    background-size: cover;
@@ -196,33 +197,33 @@ header{
 }
 .content1-main-top-right{
 	width:650px;
-	height: 300px;
+	height: 100%;
 	background: #fff;
 	position: absolute;
-	right: 40px;
-	top: 30px;
+	right: 60px;
+	/* top: 80px; */
 	margin: auto;
 	overflow: hidden;
 }
 .content1-right-top{
 	width: 100%;
-	height: 100px;
+	height: auto;
 	background: #fff;
 	float: left;
 }
 .content1-right-top-zi{
 	font-weight: 600;
-	font-size: 34px;
+	font-size: 26px;
 	text-align: center;
-	line-height: 100px;
+	/* line-height: 20%; */
 }
 .content1-right-bottom{
 	width: 100%;
-	height: 180px;
+	height: auto;
 	float: left;
 	background: #fff;
 	border: 1px solid #74B1E0;
-	margin-top:10px;
+	margin-top:5px;
 	transition: all .3s linear;
 }
 .content1-right-bottom:hover{
@@ -235,33 +236,33 @@ header{
 	color: #333;
 }
 .content1-main-top-left1{
-	width: 250px;
-	height: 250px;
+	width: 150px;
+	height: 150px;
 	border-radius: 50%;
 	float: right;
 	background: #fff;
     position: absolute;
     right: 20px;
-    top: 30px;
+    /* top: 30px; */
     margin: 0 auto ;
     background: url('../img/工程师.jpg') center center no-repeat;
     background-size: cover;
 }
 .content1-main-top-right1{
 	width: 750px;
-	height: 300px;
+	height: 100%;
 	background: #fff;
 	position: absolute;
 	left: 40px;
-	top: 30px;
+	/* top: 30px; */
 	margin: auto;
 	overflow: hidden;
 
 }
 .content1-right-bottom ul{
 	width: 100%;
-	height: 140px;
-	margin-top: 20px;
+	height: 100%;
+	/* margin-top: 20px; */
 	/* background: red; */
 	overflow: hidden;
 }
@@ -269,7 +270,7 @@ header{
 	width: 170px;
 	margin-right: 22px;
 	/* background: blue; */
-	height: 140px;
+	height: 100%;
 	float: left;
 }
 .content1-right-tu{
@@ -311,13 +312,17 @@ header{
 	/* width: 1230px; */
 	/* border: 1px dashed #74B1E0; */
 	max-width: 1200px;
-	height: auto;
+	/* height: auto; */
 	margin: 0 auto;
-	height: 100%;
+	height: 70%;
 
+}
+.content2{
+	height: 100%;
 }
 .wugekuang{
 	width:25%;
+	height: 100%;
 	/* height: 100%; */
 	background-color: #fff;
 	text-align: center;
@@ -346,7 +351,7 @@ header{
 .wugekuangxia{
 	margin: 0 auto;
 	width: 238px;
-	height: 270px;
+	height: 50%;
 	background-color: #fff;
 	position: relative;
 }
@@ -357,7 +362,7 @@ header{
     position: absolute;
     left: 0;
     right: 0;
-    top: 19px;
+    /* top: 19px; */
     margin: auto;
     height: 24px;
     font-weight: 700;
@@ -377,11 +382,11 @@ header{
 .pinpaitu{
 	position: absolute;
     left: 0;
-    top: 72px;
+    top: 60px;
     right: 0;
     margin: auto;
     width: 140px;
-    height: 140px;
+    height: 50%;
     background-color: #000;
     background: #E5F2FC;
     border-radius: 70px;
@@ -403,9 +408,9 @@ header{
     width: 200px;
     background-color: #EEE;
     margin: 0 auto;
+    
 }
 .wugekuangxia .pinpaitu img:hover{
-	
 	width: 150px;
 	height: 150px;
 	padding: 0;
@@ -417,7 +422,7 @@ span{
     position: absolute;
     left: 0;
     right: 0;
-    top: 230px;
+    top: 150px;
     bottom: 0;
     margin: auto;
     line-height: 24px;
@@ -470,8 +475,8 @@ h4{
 }
 .footer-main-left p{
 	color: #969696;
-    font-size: 2em;
-    line-height: 2em;
+    font-size: 1.5em;
+    line-height: 1.5em;
 }
 .footer-main-right{
 	float: left;
@@ -497,7 +502,7 @@ form input{
     border-top: 0;
     outline: none;
     font-family: 'Alegreya', serif;
-    padding: 3em 0;
+    padding: 2em 0;
     font-size: 1.5em;
      font-style: italic;
 }
@@ -511,7 +516,7 @@ form input:nth-child(4){
     font-size: 20px;
     position: absolute;
     left: 0px;
-    top: 600px;
+    top: 450px;
     margin: auto;
     padding: 0em 0.2em 0 1.5em;
     outline: none;
@@ -1530,3 +1535,100 @@ span{
 	display: block;
 }
 }
+.row{width: 103%; float: left; margin: 110px -1.5%;}
+
+/*= common css to all effects =*/
+.single-member{width: 280px; float: left; margin: 30px 2.5%; background-color: #fff; text-align: center; position: relative;}
+.member-image img{max-width: 100%; vertical-align: middle;}
+h3 {font-size: 24px; font-weight: normal; margin: 10px 0 0; text-transform: uppercase;}
+h5 {font-size: 16px; font-weight: 300; margin: 0 0 15px; line-height: 22px;}
+p {font-size: 14px; font-weight: 300; line-height: 22px; padding: 0 30px; margin-bottom: 10px;}
+.social-touch a{display: inline-block; width: 27px; height: 26px; vertical-align: middle; margin: 0 2px; background-image: url(../images/social-icons.png); background-repeat: no-repeat; opacity: 0.7; transition: 0.3s;}
+.social-touch a:hover{opacity: 1; transition: 0.3s;}
+.fb-touch{background-position: 0 0;}
+.tweet-touch{background-position: -35px 0;}
+.linkedin-touch{background-position: -71px 0;}
+.icon-colored .fb-touch{background-position: 0 -27px;}
+.icon-colored .tweet-touch{background-position: -35px -27px;}
+.icon-colored .linkedin-touch{background-position: -71px -27px;}
+.effect-1{border-radius: 5px 5px 0 0; padding-bottom: 40px;}
+.effect-1 .member-image {border: 2px solid #fff; border-radius: 60px 0; display: inline-block; margin-top: -72px; overflow: hidden; transition: 0.3s;}
+.effect-1 .social-touch{background-color: #e13157; position: absolute; left: 0; bottom: 0; height: 5px; overflow: hidden; padding: 5px 0 0; width: 100%; transition: 0.3s;}
+.effect-1 .member-image img{transition: 0.3s; border-radius: 60px 0;}
+.effect-1:hover .member-image{border-color: #e13157; transition: 0.3s; border-radius: 50%;}
+.effect-1:hover .social-touch{padding: 6px 0; height: 38px; transition: 0.3s;}
+/*= effect-2 css =*/
+.effect-2{max-height: 302px; min-height: 302px; overflow: hidden;}
+.effect-2 h3{padding-top: 7px; line-height: 33px;}
+.effect-2 .member-image{border-bottom: 5px solid #1fb554; height: 212px; overflow: hidden; width: 100%; transition: 0.4s; display: inline-block; float: none; vertical-align: middle;}
+.effect-2 .member-info{transition: 0.4s;}
+.effect-2 .member-image img{width: 100%; vertical-align: bottom;}
+.effect-2 .social-touch{background-color: #1fb554; float: left; left: 0; bottom: 0; overflow: hidden; padding: 5px 0; width: 100%; transition: 0.4s;}
+.effect-2:hover .member-image{height: 81px; transition: 0.4s;}
+/*= effect-2 css end =*/
+
+/*= effect-3 css =*/
+.effect-3{max-height: 302px; min-height: 302px; overflow: hidden;}
+.effect-3 h3{padding-top: 7px; line-height: 33px;}
+.effect-3 .member-image{border-bottom: 5px solid #e5642b; transition: 0.4s; height: 212px; width: 100%; display: inline-block; float: none; vertical-align: middle;}
+.effect-3 .member-info{transition: 0.4s;}
+.effect-3 .member-image img{width: 100%; vertical-align: bottom;}
+.effect-3 .social-touch{background-color: #e5642b; float: left; left: 0; bottom: 0; overflow: hidden; padding: 5px 0; width: 100%; transition: 0.4s;}
+.effect-3:hover .member-image{border-bottom: 0; border-radius: 0 0 50px 50px; height: 81px; display: inline-block; overflow: hidden; width: 109px; transition: 0.4s;}
+/*= effect-3 css end =*/
+
+/*= effect-4 css =*/
+.effect-4{max-height: 289px; min-height: 289px; overflow: hidden;}
+.effect-4 h3{line-height: 35px;}
+.effect-4 .member-image{position: absolute; width: 100%; transition: 0.4s;}
+.effect-4 .member-image img{width: 100%;}
+.effect-4 .more-info{height: 0; transition: 0.4s; overflow: hidden; z-index: 9; position: relative; background-color: #fff;} 
+.effect-4:hover .more-info{height: 208px; transition: 0.4s;}
+/*= effect-4 css end =*/
+
+/*= effect-5 css =*/
+.effect-5{max-height: 289px; min-height: 289px; overflow: hidden;}
+.effect-5 .member-info {background-color: #fff; position: absolute; width: 100%; top: 0; left: 0; height: 82px; transition: 0.3s; z-index: 2;}
+.effect-5 .member-image{margin-top: 82px; float: left; width: 100%; position: relative; transition: 0.3s; z-index: 4;}
+.effect-5 .member-image img{width: 100%;}
+.effect-5 .member-info:before{border-left: 140px solid transparent; border-right: 140px solid transparent; border-top: 15px solid #fff; bottom: -15px; content: ""; left: 0; position: absolute; z-index: 9;}
+.effect-5:hover .member-info{height: 215px; transition: 0.3s; z-index: 6;}
+.effect-5:hover .member-image{margin-top: 200px; transition: 0.3s;}
+/*= effect-5 css end =*/
+
+/*= effect-6 css =*/
+.effect-6{max-height: 289px; min-height: 289px; overflow: hidden;}
+.effect-6 .member-info {background-color: #fff; position: absolute; width: 100%; top: 0; left: 0; height: 82px; transition: 0.3s; z-index: 2;}
+.effect-6 .member-image{margin-top: 82px; float: left; width: 100%; position: relative; transition: 0.3s; z-index: 4; overflow: hidden;}
+.effect-6 .member-image img{width: 100%;}
+.effect-6:hover .member-info{height: 215px; transition: 0.3s; z-index: 6; border-radius: 0 0 50% 50%; overflow: hidden;}
+.effect-6:hover .member-image{margin-top: 100px; transition: 0.3s; border-radius: 0;}
+/*= effect-6 css end =*/
+
+/*= effect-7 css =*/
+.effect-7{max-height: 289px; min-height: 289px; overflow: hidden;}
+.effect-7 h3{line-height: 35px;}
+.effect-7 .member-image{position: absolute; bottom: 0; width: 100%; transition: 0.4s; z-index: 1;}
+.effect-7 .member-image img{width: 100%; transition: 0.4s; opacity: 1; height: 100%;}
+.effect-7 .more-info{height: 208px; transition: 0.4s; overflow: hidden; position: relative; background-color: #fff;}
+.effect-7:hover .member-image{bottom: 40%;}
+.effect-7:hover .member-image img{width: 0; height: 0; transition: 0.4s; opacity: 0;}
+/*= effect-7 css end =*/
+
+/*= effect-8 css =*/
+.effect-8{max-height: 289px; min-height: 289px; overflow: hidden;  perspective: 800px;}
+.effect-8 h3{line-height: 35px;}
+.effect-8 .member-image{position: absolute; bottom: 0; width: 100%; transition: 0.4s; z-index: 1;}
+.effect-8 .member-image img{width: 100%; transition: 0.4s; height: 100%;}
+.effect-8 .more-info{height: 208px; transition: 0.4s; overflow: hidden; position: relative; background-color: #fff;}
+.effect-8:hover .member-image{transform: rotateX(82deg); transform-origin: center bottom 0; transition: 0.4s;}
+/*= effect-8 css end =*/
+
+/*= effect-9 css =*/
+.effect-9{max-height: 289px; min-height: 289px; overflow: hidden;  perspective: 800px;}
+.effect-9 h3{line-height: 35px;}
+.effect-9 .member-image{position: absolute; bottom: 0; width: 100%; transition: 0.4s; z-index: 1;}
+.effect-9 .member-image img{width: 100%; transition: 0.4s; height: 100%;}
+.effect-9 .more-info{height: 208px; transition: 0.4s; overflow: hidden; position: relative; background-color: #fff;}
+.effect-9:hover .member-image{transform: translateY(100%); transition: 0.4s;}
+/*= effect-9 css end =*/
