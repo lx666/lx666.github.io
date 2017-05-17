@@ -5,12 +5,18 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/iconfont.css">
-    <link rel="stylesheet" href="css/main12.css">
     <link rel="stylesheet" href="css/jquery.fullPage.css">
     <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="css/demo.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/styleNoJS.css">
+    <link rel="stylesheet" href="css/base1.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/vicons-font.css" />
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <script src="js/snap.svg-min.js"></script>
+    <script src="js/modernizr.custom.js"></script>
     <title>个人网页</title>
 </head>
 <body>
@@ -23,11 +29,11 @@
                         <div class="sl-slide-inner">
                          <nav>
                               <ul>
-                                <li>HOME</li>
-                                <li>PERSONAL</li>
-                                <li>GALLERY</li>
-                                <li>KNOW MORE</li>
-                                <li>CONTACT ME</li>
+                                <li data-menuanchor="firstPage" class="active">HOME</li>
+                                <li data-menuanchor="secondPage">PERSONAL</li>
+                                <li data-menuanchor="thirdPage">GALLERY</li>
+                                <li data-menuanchor="fourthPage">MESSAGE</li>
+                                <li data-menuanchor="fivePage">CONTACT ME</li>
                               </ul>
                           </nav>
                             <div class="deco" data-icon="q">
@@ -41,122 +47,88 @@
             </div>
         </div>
     </div>
-    <!--<div class="header-bottom"></div>-->
-<div class="section">
-    <div class="content1">
-        <div class="biaoti">
-            <div class="biaotizi">个人简介</div>
-        </div>
-        <div class="biankuang">
-            <img src="img/vectro.png" alt="">
-        </div>
-        <div class="content1-main">
-            <div class="content1-main-top">
-                <div class="content1-main-top-left">
-                </div>
-                <div class="content1-main-top-right">
-                    <div class="content1-right-top">
-                        <div class="content1-right-top-zi">个人信息
-                        </div>
-                    </div>
-                    <div class="content1-right-bottom">
-                        <div class="content1-right-bottom-zi">
-
-                            姓名：吕玺<br>
-                            性别：女<br>
-                            籍贯：山西<br>
-                            我的座右铭：人生只有直播,没有彩排。
-                            <br>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="content1-main-top">
-                <div class="content1-main-top-left1"></div>
-                <div class="content1-main-top-right1">
-                    <div class="content1-right-top">
-                        <div class="content1-right-top-zi">职业技能</div>
-                    </div>
-                    <div class="content1-right-bottom">
-                        <ul class="content1-right">
-                            <li>
-                                <a href="">
-                                    <div class="list-1">
-                                        <div class="content1-right-tu"></div>
-                                        <div class="content1-right-zi"> Adobe Photoshop CS6</div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <div class="list-1">
-                                        <div class="content1-right-tu2"></div>
-                                        <div class="content1-right-zi"> C++</div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <div class="list-1">
-                                        <div class="content1-right-tu3"></div>
-                                        <div class="content1-right-zi"> Id</div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li style="float: right;margin-right: 0;">
-                                <a href="">
-                                    <div class="list-1">
-                                        <div class="content1-right-tu4"></div>
-                                        <div class="content1-right-zi"> JS</div>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                        <div class=content2-right-xiao>
-                            <div class="content1-right-bottom-zi">
-                                平面设计师<br>
-                                高级视觉设计师<br>
-                                web前端工程师<br>
-                                电子出版师<br>
-                                ...<br>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- <div class="content1-main-top">
-                <div class="content1-main-top-left"></div>
-                <div class="content1-main-top-right">
-                    <div class="content1-right-top">
-                        <div class="content1-right-top-zi">荣誉证书</div>
-                    </div>
-                    <div class="content1-right-bottom">
-                        <div class="content1-right-bottom-zi">
-                            <br>
-                            平面设计师<br>
-                            高级视觉设计师<br>
-                            web前端工程师<br>
-                            电子出版师<br>
-                            普通话证书<br>
-                            ...<br>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-        </div>
+<div class="section" style="background:url('img/bgs2.jpg') center center no-repeat;
+    background-size: 100%;
+    width: 100%;
+    height: 100%;">
+<div class="demo-1" style="background:rgba(0,0,0,.6);width:100%;height:100%;">
+<div id="morph-shape" class="morph-shape" data-morph-next="M301,301c0,0-83.8-21-151-21C71.8,280-1,301-1,301s21-65.7,21-151C20,79.936-1-1-1-1s73,11,151,11c85,0,151-11,151-11
+  s-21,66.43-21,151C280,229.646,301,301,301,301z">
+  <svg width="100%" height="100%" viewBox="0 0 300 300" preserveAspectRatio="none">
+    <path d="M301,301c0,0-83.8,0-151,0c-78.2,0-151,0-151,0s0-65.7,0-151C-1,79.936-1-1-1-1s73,0,151,0c85,0,151,0,151,0s0,66.43,0,151
+C301,229.646,301,301,301,301z" />
+  </svg>
+</div>
+    <div class="main">
+      <div class="container">
+        <header class="codrops-header">
+          <h1>MY SKILLS</h1>
+          <p class="info"><strong>Drag the stack or click the button to navigate.</strong></p>
+        </header>
+        <div class="stack">
+          <ul id="elasticstack" class="stack__images">
+            <li><img src="img/1.png" alt="css"/></li>
+            <li><img src="img/js.jpg" alt="js"/></li>
+            <li ><img src="img/html.jpg" alt="jQuery"/></li>
+            <li><img src="img/ps-logo.jpg" alt="html"/></li>
+            <li><img src="img/ajax.jpg" alt="java"/></li>
+            <li><img src="img/nodejpg.jpg" alt="AI"/></li>
+          </ul>
+          <button id="stack-next" class="stack__next"><i class="icon icon-down"></i><span>Next</span></button>
+          <ul id="stack-titles" class="stack__titles">
+            <li class="current">
+              <blockquote>
+              <span>CSS</span>
+                <p>"A computer language used to represent HTML (a standard generic markup language) or XML (a subset of standard markup language)."</p>
+              </blockquote>
+            </li>
+            <li>
+              <blockquote>
+                <span>JAVASCRIPT</span>
+                <p>"JavaScript, a literal translation scripting language, is a dynamic type, a weak type, a prototype based language, and a built-in support type."</p>
+              </blockquote>
+            </li>
+            <li>
+              <blockquote>
+              <span>HTML</span>
+                <p>"The purpose of designing the HTML language is to facilitate the integration of text or graphics stored in a computer with text or graphics in another computer to form an organic whole. "</p>
+              </blockquote>
+            </li>
+            <li>
+              <blockquote>
+              <span>PS</span>
+                <p>"Photoshop mainly deals with digital images made up of pixels. The use of its numerous editing and drawing tools, can effectively carry out picture editing work."</p>
+              </blockquote>
+            </li>
+            <li>
+              <blockquote>
+              <span>AJAX</span>
+                <p>"Based on the data in the application, the user needs the data such as contact list, can independently of the actual page from the server and can be dynamically written."</p>
+              </blockquote>
+            </li>
+            <li>
+              <blockquote>
+              <span>NODE.JS</span>
+                <p>"Node.js uses event driven and non blocking I/O models to make it minor and efficient, and is ideal for building data intensive real-time applications running on distributed devices."</p>
+              </blockquote>
+            </li>
+          </ul>
+        </div><!-- /stack -->
+      </div><!-- /container -->
+    </div><!-- /main-->
     </div>
 </div>
-<div class="section">
+<div class="section" style="background:url('img/qiang.jpg') center center no-repeat;
+    background-size: 100%;
+    width: 100%;
+    height: 100%;">
     <div class="content2">
-        <div class="biaoti" style="margin-bottom: 120px;">
-            <div class="biaotizi">作品展示
-            </div>
-            <div class="biankuang">
-                <img src="img/vectro.png" alt="">
-            </div>
-        </div>
         <div class="content2-main">
-            <div class="slide">
+        <div style="width: 100%;height:50px;"></div>
+        <header class="codrops-header">
+          <h1 style="color: #fff;font-weight: 700;">MY GALLERY</h1>
+        </header>
+            <div class="slide" style="margin-top: 70px;">
                 <div class="team-members row1">
                     <div class="wugekuang" style="float: left;">
                         <div class="single-member effect-8">
@@ -165,7 +137,7 @@
                                 <h5>ChinaMobile</h5>
                             </div>
                             <div class="member-image">
-                                <img src="img/yidong.jpg" alt="Member" style="width: 200px;height: 200px;">
+                                <img src="img/timg.png" alt="Member" style="width: 200px;height: 200px;">
                             </div>
                             <div class="more-info">
                                 <a href="yidong/index.html">
@@ -205,7 +177,7 @@
                                 <h5>Canvars</h5>
                             </div>
                             <div class="member-image">
-                                <img src="img/huitu.jpg" alt="Member" style="width: 200px;height: 200px;">
+                                <img src="img/huitu.png" alt="Member" style="width: 200px;height: 200px;">
                             </div>
                             <div class="more-info">
                                 <a href="canvars/canvas2.html">
@@ -225,7 +197,7 @@
                                 <h5>XiaoMI</h5>
                             </div>
                             <div class="member-image">
-                                <img src="img/xiaomi4.jpg" alt="Member" style="width: 200px;height: 200px;">
+                                <img src="img/xiaomi4.png" alt="Member" style="width: 200px;height: 200px;">
                             </div>
                             <div class="more-info">
                                 <a href="xiaomi/xiaomi.html">
@@ -240,12 +212,12 @@
                     </div>
                 </div>
             </div>
-            <div class="slide">
+            <div class="slide" style="margin-top: 70px;">
                 <div class="team-members row1">
                     <div class="wugekuang" style="float: left;">
                         <div class="single-member effect-2">
                             <div class="member-image">
-                                <img src="images/fankeimg.jpg" alt="Member">
+                                <img src="images/fankeimg.png" alt="Member">
                             </div>
                             <div class="member-info">
                                 <h3>凡客</h3>
@@ -263,7 +235,7 @@
                     <div class="wugekuang" style="float: left;">
                         <div class="single-member effect-3">
                             <div class="member-image">
-                                <img src="img/jingdonglogo.jpg" alt="Member">
+                                <img src="img/jingdong.png" alt="Member" style="width: 200px;height:200px;">
                             </div>
                             <div class="member-info">
                                 <h3>京东</h3>
@@ -281,7 +253,7 @@
                     <div class="wugekuang" style="float: left;">
                         <div class="single-member effect-2">
                             <div class="member-image">
-                                <img src="img/rijiben.jpg" alt="Member" style="width: 200px;height: 200px;">
+                                <img src="img/ben.png" alt="Member" style="width: 200px;height: 200px;">
                             </div>
                             <div class="member-info">
                                 <h3>日记本</h3>
@@ -316,7 +288,7 @@
                     </div>
                 </div>
             </div>
-            <div class="slide">
+            <div class="slide" style="margin-top: 70px;">
                 <div class="team-members row1">
                     <div class="wugekuang" style="float: left;">
                         <div class="single-member effect-4">
@@ -363,7 +335,7 @@
                                 <h5>Apple</h5>
                             </div>
                             <div class="member-image">
-                                <img src="img/pingguo.jpg" alt="Member" style="width:200px;height: 200px;">
+                                <img src="img/pingguo.png" alt="Member" style="width:200px;height: 200px;">
                             </div>
                             <div class="more-info">
                                 <a href="anple/index.html">
@@ -379,7 +351,7 @@
                     <div class="wugekuang" style="float: left;">
                         <div class="single-member effect-5">
                             <div class="member-image">
-                                <img src="img/sy_47777857225.jpg" alt="Member" style="width: 200px;height:200px;">
+                                <img src="img/sy_47777857225.png" alt="Member" style="width: 200px;height:200px;">
                             </div>
                             <div class="member-info">
                                 <h3>天猫官网</h3>
@@ -432,16 +404,9 @@
             </div>
             <div class="col-md-3"></div>
           </form>
-      <div class="google_map">
-        <div id="map-canvas"></div>
-      </div>
-      <footer class="container">
-        <div class="col-md-12 wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp; animation-duration: 0.4s; animation-delay: 0.4s;" data-wow-delay="0.4s" data-wow-duration="0.4s">
           <span>
-               Copyright © 2015 Your Company Name
-            </span>
-        </div>
-      </footer>
+               Copyright © 2017 Your Company Name
+          </span>
     </section>
 </div>
 </div>
@@ -449,18 +414,54 @@
 <script src="js/jquery.js"></script>
 <script src="js/jquery.fullPage.js"></script>
 <script src="js/jquery.fullPage.min.js"></script>
+<script src="js/draggabilly.pkgd.min.js"></script>
+<script src="js/elastiStack.js"></script>
 <script>
     $(function () {
         $('#fullpage').fullpage({
             'verticalCentered': false,
             'css3': true,
-            'sectionsColor': ['rgba(0,0,0,0.3)', '#fff', '#fff', '#fff'],
-            anchors: ['page1', 'page2', 'page3', 'page4'],
+            /*'sectionsColor': ['rgba(0,0,0,0.3)', '#fff', '#fff', '#fff'],*/
             'navigation': true,
             'navigationPosition': 'right',
-            'navigationTooltips': ['banner', '个人简介', '作品展示', '联系我']
+            'navigationTooltips': ['HOME', 'PERSONAL', 'GALLERY', 'CONTANT ME'],
+            anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fivePage'],
+           menu: '#myMenu',
+           // showActiveTooltip:true
         })
     })
-    var count_particles, stats, update;
+    
+      $(function() {
+        var body = document.body,
+          titles = [].slice.call( document.querySelectorAll( '#stack-titles > li' ) ),
+          totalTitles = titles.length,
+          stack = new ElastiStack( document.getElementById( 'elasticstack' ), {
+            onUpdateStack : function( idx ) {
+              classie.remove( titles[idx === 0 ? totalTitles - 1 : idx - 1], 'current' );
+              classie.add( titles[idx], 'current' );
+            }
+          } ),
+          shapeEl = document.getElementById( 'morph-shape' ),
+          s = Snap( shapeEl.querySelector( 'svg' ) ),
+          pathEl = s.select( 'path' ),
+          paths = { 
+            reset : pathEl.attr( 'd' ),
+            next  : shapeEl.getAttribute( 'data-morph-next' )
+          };
+
+        document.getElementById( 'stack-next' ).addEventListener( 'mousedown', nextItem );
+        
+        function nextItem() {
+          classie.add( body, 'animating' );
+          classie.add( body, 'navigate-next' );
+          pathEl.stop().animate( { 'path' : paths.next }, 450, mina.easeinout, function() {
+            classie.remove( body, 'navigate-next' );
+            stack.nextItem( { transform : 'translate3d(0,-60px,400px)' } );
+            pathEl.stop().animate( { 'path' : paths.reset }, 100, mina.easeout, function() {
+              classie.remove( body, 'animating' );
+            } );
+          } );
+        }
+      })();
 </script>
 </html>

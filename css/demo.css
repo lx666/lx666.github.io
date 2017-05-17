@@ -45,24 +45,24 @@ a {
 	text-decoration: none;
 }
 
-.container {
+.section .main .container {
 	width: 100%;
 	position: relative;
 }
 
-.container.demo-1 {
+.section .main .container.demo-1 {
 	height: 100%;
 	position: absolute;
 }
 
-.clr {
+.section .main .clr {
 	clear: both;
 	padding: 0;
 	height: 0;
 	margin: 0;
 }
 
-.main {
+.section .main {
 	width: 90%;
 	margin: 0 auto;
 	position: relative;
@@ -86,8 +86,9 @@ a {
 	line-height: 38px;
 	margin: 0;
 	font-weight: 700;
-	color: #333;
-	float: left;
+	color: #fff;
+	/* float: left; */
+	text-align: center;
 }
 
 .container > header h1 span {
