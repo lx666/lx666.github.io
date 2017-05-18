@@ -12,19 +12,14 @@
             padding: 0;
             height: 100%;
         }
-        canvas {
-            display: block;
-            margin: 0 auto;
-            background: rgba(0,0,0,0.3);
-            cursor: pointer;
-        }
         * {
             user-select: none;
         }
         aside{
             width:15%;
             height: 100%;
-            background:linear-gradient(#C4E0E5,#4CA1AF);
+            background: rgba(0, 0, 0, .5);
+            /* background:linear-gradient(#C4E0E5,#4CA1AF); */
             float: left;
         }
         section{
@@ -47,6 +42,31 @@
             border-radius: 5px;
             border: 0;
             outline: none;
+            cursor: pointer;
+        }
+        .xin{
+            width: 1000px;
+            height: 600px;
+            background: url('c1.jpg') center center no-repeat;
+            background-size: 1000px 600px;
+            position: relative;
+            left: 100px;
+            /* top: 50px; */
+            margin: auto;
+
+        }
+        h1{
+            font-size: 34px;
+            color: #000;
+            text-align: center;
+        }
+        canvas{
+            position: absolute;
+            left: 351px;
+            top: 17px;
+            margin: auto;
+            background: #fff;
+            display: block;
             cursor: pointer;
         }
     </style>
@@ -89,7 +109,10 @@
     <input type="button" value="保存" id="save">
     <input type="button" value="清空" id="clear">
 </aside>
-<canvas width="500px" height="500px"></canvas>
+<h1>CANVAS</h1>
+<div class="xin">
+<canvas width="624px" height="568px"></canvas>
+</div>
 </body>
 <script src="draw.js"></script>
 <script>
@@ -133,7 +156,7 @@
             var mx = e.offsetX;
             var my = e.offsetY;
             if(s!="eraser"){
-                cobj.clearRect(0, 0, 500, 500);
+                cobj.clearRect(0, 0, 642, 568);
                 if (data.length!=0) {
                     cobj.putImageData(data[data.length-1], 0, 0);
                 }
@@ -143,7 +166,7 @@
         document.onmouseup = function () {
             canvas.onmousemove = null;
             document.onmouseup = null;
-            data.push(cobj.getImageData(0, 0, 500, 500));
+            data.push(cobj.getImageData(0, 0, 624, 568));
         }
     };
     var redo=document.querySelector("#redo");
@@ -152,7 +175,7 @@
             alert("当前已经是最后一条数据");
             return;
         }
-        cobj.clearRect(0,0,500,500);
+        cobj.clearRect(0,0,624,568);
         data.pop();
         if(data.length==0){
             return;
@@ -166,7 +189,7 @@
     };
     var clear=document.querySelector("#clear");
     clear.onclick=function () {
-        cobj.clearRect(0,0,500,500);
+        cobj.clearRect(0,0,624,568);
         data=[];
     }
 </script>

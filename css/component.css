@@ -61,9 +61,9 @@ ul.stack__images {
 	pointer-events: none;
 }
 
-.stack__images li:hover {
+/* .stack__images li:hover {
 	cursor: url(../img/cursor_vulcan.png), auto;
-}
+} */
 
 .stack__images li:active {
 	cursor: -webkit-grabbing;
@@ -129,13 +129,13 @@ ul.stack__titles {
 	font-size: 30px;
 	color: #fff;
 	text-align: center;
-	margin-top: 40px;
+	margin-top: 25px;
 }
 .stack__titles blockquote p{
 	font-size: 20px;
 	color: #fff;
 	text-align: center;
-	margin-top: 15px;
+	margin-top: 10px;
 }
 .stack__titles blockquote footer {
 	font-size: 50%;
