@@ -310,8 +310,8 @@ ul{
 .fix{
 	float: right;
 	position: fixed;
-	top:700px;
-	right:0;
+	bottom:20px;
+	right: 0;
 	/*margin-right: -900px;*/
 	z-index: 1000;
 	cursor: pointer;
