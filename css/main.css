@@ -928,11 +928,11 @@ right: 0;
 .abm-icon6{top:420px;}
 
 .abm-list{width:500px;height:100px;margin-top:60px;position: relative;font-size: 20px;text-align: center;color:#fff;background:url(../img/abmlistbg1.png);}/**/
-.abm-list-l{width:200px;height: 50px;position: absolute;left:30px;top:20px;line-height: 25px}
+.abm-list-l{height: 50px;position: absolute;left:30px;top:20px;line-height: 25px}
 .abm-list-r{width:100px;height: 30px;position: absolute;right:50px;top:10px;line-height: 30px}
 .abm-list1{width:500px;height:100px;margin-top: 70px;position: relative;color:#fff;font-size: 20px;background: url(../img/abmlistbg2.png);}/**/
 .abm-list1-l{width:100px;height: 30px;position: absolute;left:60px;top:20px;line-height: 25px;}
-.abm-list1-r{width:270px;height: 50px;position: absolute;right:0px;top:10px;line-height: 30px;text-align: center;}
+.abm-list1-r{height: 50px;position: absolute;right:0px;top:10px;line-height: 30px;text-align: center;}
 .abm-an{width:150px;height:35px;border-radius: 5px;border:1px solid #fff;position: absolute;left:0;right:0;margin:auto;bottom:0px;font-size:16px;color:#eee;font-family:Gray Design;text-align: center;line-height: 35px;background: #000;transition:all 0.3s linear;cursor: pointer;}
 .abm-an:hover{background:#111;font-size: 18px}
 
