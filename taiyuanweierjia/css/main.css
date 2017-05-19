@@ -74,11 +74,13 @@
 		position: absolute;
 		left: 0;right: 0;top:0;bottom:0;
 		margin:auto;
+		transition: all 1s;
 	}
 	.banner ul.bannertu li img{
 		width: 100%;
 		height: 373.785px;
 		opacity: 0;
+		transition: all 2s;
 	}
 	.banner ul.bannertu li img:nth-child(1){
        opacity: 1;

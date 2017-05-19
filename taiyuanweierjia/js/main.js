@@ -39,6 +39,47 @@ banner.onmouseover=function () {
 banner.onmouseout=function () {
     t=setInterval(click,3000);
 };
+
+/*
+var tb;
+Array.from(btnsban).forEach(function (vb,ib) {
+    vb.onmouseover=function () {
+        num=ib;
+        clearTimeout(tb);
+        tb=setTimeout(function () {
+            nowbtnsban.style.background="#333";
+            vb.style.background="#fff";
+            nowbtnsban=vb;
+            nowconsban.style.opacity=0;
+            nowconsban.style.zIndex=1;
+            consban[ib].style.opacity=1;
+            consban[ib].style.zIndex=2;
+            nowconsban=consban[ib];
+        },500)
+    }
+});
+var num=0;
+var t=setInterval(ban,4000);
+function  ban() {
+    num++;
+    if (num == btnsban.length) {
+        num = 0;
+    }
+    nowbtnsban.style.background="#333";
+    btnsban[num].style.background="#fff";
+    nowbtnsban=btnsban[num];
+    nowconsban.style.opacity=0;
+    nowconsban.style.zIndex=1;
+    consban[num].style.opacity=1;
+    consban[num].style.zIndex=2;
+    nowconsban=consban[num];
+}
+banner.onmouseover=function () {
+    clearInterval(t);
+};
+banner.onmouseout=function (){
+    t=setInterval(ban,4000);
+};*/
 Array.from(btnspro).forEach(function (ele,index) {
     num1=index;
     ele.onmouseover=function () {
@@ -69,7 +110,7 @@ function move() {
     conspro[num1].style.zIndex=2;
 }
 pro.onmouseover=function () {
-    clearInterval(t);
+    clearInterval(t1);
 };
 pro.onmouseout=function () {
     t1=setInterval(click,3000);
