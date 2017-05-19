@@ -2196,7 +2196,7 @@ li .huan img{
 	background:#fff;
 	position: fixed;
 	left: 50%;
-	top: 60%;
+	bottom: 20px;
 	margin-left: -660px;
 	transition: all 0.6s;
 }
@@ -2320,7 +2320,7 @@ li .huan img{
 	cursor: pointer;
 }
 .youce .youce1{
-	height: 250px;
+	height: 150px;
 	width: 35px;
 }
 .youce .youce2{
@@ -2425,7 +2425,6 @@ li .huan img{
 }
 .youce .youcekong{
 	width: 35px;
-	height: 150px;
 }
 .youce .youce8{
 	 height: 35px;
@@ -2547,5 +2546,5 @@ li .huan img{
 	bottom:15px;
 	margin: auto;
 	color: #F64B44;
-	z-index: 1000;
+	z-index: 99999999;
 }
