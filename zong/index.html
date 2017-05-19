@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style>
+        *{
+        	padding: 0;
+        	margin: 0;
+        }
+        body{
+        	min-width: 1200px;
+        	min-height: 600px;
+        	background: #fff;
+        }
+        .main{
+        	width: 1200px;
+        	height: 600px;
+        	background: #fff url('img/bg.jpg');
+        	margin: 0 auto;
+        	overflow: hidden;
+        	position: relative;
+        }
+        .c_zongzi_box{
+        	width: 312px;
+        	height: 305px;
+        	position: absolute;
+        	right: 100px;
+        	top: 184px;
+        }
+        .c_zongzi{
+        	width: 312px;
+        	height: 305px;
+        	background: url('img/zz.png');
+        	/* opacity: 1; */
+        	transition: all  1s;
+        }
+        .c_zongzi_out{
+        	opacity: 0;
+        	transform: scale(0.5);
+        }
+        .c_sheng_1{
+			width: 218px;
+			height: 180px;
+			background: url('img/line_1.png');
+			position: absolute;
+			left: 10px;
+			top: 120px;
+			cursor: pointer;
+			z-index: 999;
+        }
+           .c_sheng_2{
+			width: 219px;
+			height: 159px;
+			background: url('img/line_2.png');
+			position: absolute;
+			left: 10px;
+			top: 158px;
+        }
+            .c_sheng_3{
+			width: 264px;
+			height: 117px;
+			background: url('img/line_3.png');
+			position: absolute;
+			left: 10px;
+			top: 220px;
+        }
+            .c_sheng_4{
+			width: 288px;
+			height: 56px;
+			background: url('img/line_4.png');
+			position: absolute;
+			left: 10px;
+			top: 280px;
+        }
+          .c_sheng_0{
+			display: none;
+        }
+        .c_zongrou{
+        	width: 288px;
+        	height: 206px;
+        	background: url('img/zzr_1.png') no-repeat;
+        	background-size: 288px 206px;
+        	position: absolute;
+        	left: 50px;
+        	top: 54px;
+        	z-index: 110;
+        	opacity: 0;
+        	transform-origin:    top center;
+        	transition: all 1s;
+        	transform: scale(0.8);
+        }
+        .c_zongrou_out{
+        	opacity: 1;
+        }
+        .c_zongrou_in{
+        	opacity: 1;
+        	transform: scale(1);
+        }
+        /* 粽肉视觉 */
+	.c_zongrou_view_1{
+		transition: all 0s;
+		background-image: url('img/zzr_1.png');
+	} 
+         .c_zongrou_view_2{
+         	transition: all 0s;
+        	background-image: url('img/zzr_2.png');
+        }
+         .c_zongrou_view_3{
+         	transition: all 0s;
+        	background-image: url('img/zzr_3.png');
+        }
+         .c_zongrou_view_4{
+         	transition: all 0s;
+        	background-image: url('img/zzr_4.png');
+        }
+         .c_zongrou_view_0{
+         	transition: all 0s;
+        	background-image: url('img/zzr_1.png');
+        	transform: rotateY(180deg);
+        }
+        .c_zuoye{
+        	width: 114px;
+        	height: 266px;
+        	background: url('img/leaf_left.png');
+        	position: absolute;
+        	left:20px;
+        	top: -50px;
+        	z-index: 1;
+        	opacity: 0;
+        	transition: all 1s;
+        	transform-origin: left bottom;
+        }
+        .c_youye{
+        	width: 318px;
+        	height: 338px;
+			background: url('img/leaf_right.png');
+        	position: absolute;
+        	left: 90px;
+        	top: -60px;
+        	z-index: 111;
+        	opacity: 0;
+        	transition: all 1s;
+        	transform-origin: left bottom;
+        	transform: scale(.8);
+        }
+        .c_zuoye_in{
+			opacity: 1;
+			transform: rotate(-5deg);
+        }
+        .c_zuoye_out{
+        	opacity: 0;
+        	transform: rotate(-15deg);
+        }
+        .c_youye_in{
+        	opacity: 1;
+        	transform: rotate(5deg) scale(0.8);
+        }
+         .c_youye_out{
+        	opacity: 0;
+        	transform: rotate(15deg) scale(0.8);
+        }
+        .c_diye{
+        	width: 618px;
+        	height: 468px;
+        	background: url('img/leaf_expand.png');
+        	position: absolute;
+        	left: -150px;
+        	top: -60px;
+        	z-index: 99;
+        	opacity: 0;
+        	transition: all 1s;
+        }
+        .c_diye_in{
+        	opacity: 1;
+        }
+        .c_diye_out{
+        	opacity: 0;
+        }
+        .c_text_1{
+        	width: 180px;
+        	height: 100px;
+        	background: url('img/t_jixiang.png');
+        	position: absolute;
+        	left: 50%;
+        	top: 50%;
+        	margin-left: -70px;
+        	margin-top: -50px;
+        	z-index: 200;
+        	transform-origin: center center;
+        	transition: all 1s;
+        	transform: scale(0.8);
+        	opacity: 0;
+        }
+           .c_text_2{
+        	width: 180px;
+        	height: 100px;
+        	background: url('img/t_ruyi.png');
+        	position: absolute;
+        	left: 50%;
+        	top: 50%;
+        	margin-left: -70px;
+        	margin-top: -50px;
+        	z-index: 200;
+        	transform-origin: center center;
+        	transition: all 1s;
+        	transform: scale(0.8);
+        	opacity: 0;
+        }
+        .c_text_view_0{
+        	transition: all 0s;
+			transform: scale(0.8);
+        }
+        .c_text_mirror_0{
+        	transition: all 0s;
+        	display: none;
+        }
+        .c_text_view_2{
+        	transition: all 0s;
+        	transform: scale(0.8) rotateY(30deg) translate(-50px,0) rotate(8deg);
+        }
+         .c_text_mirror_2{
+         	transition: all 0s;
+        	transform: scale(0.7) rotateY(70deg) translate(283px,-15px) rotate(-8deg);
+        }
+          .c_text_view_3{
+          	transition: all 0s;
+        	transform: scale(0.75) rotateY(49deg) translate(-94px,0) rotate(15deg);
+        }
+         .c_text_mirror_3{
+         	transition: all 0s;
+        	transform: scale(0.75) rotateY(49deg) translate(118px,0px) rotate(-15deg);
+        }
+          .c_text_view_4{
+          	transition: all 0s;
+        	transform: scale(0.6) rotateY(50deg) translate(-196px,10px) rotate(24deg);
+        }
+         .c_text_mirror_4{
+         	transition: all 0s;
+        	transform: scale(0.8) rotateY(30deg) translate(58px,10px) rotate(-5deg);
+        }
+        .c_text_in{
+        	opacity: 1;
+        }
+        .text{
+        	width: 400px;
+        	height: 370px;
+        	left: 150px;
+        	top: 140px;
+        	position: absolute;
+        	 font-size: 14px;
+        	line-height: 20px;
+        	color: #CC0000;
+        	font-family: "宋体";
+        	/* display: none; */
+        	transition: all 1s;
+        }
+        .text_in{
+        	/* display: block; */
+        }
+        .text .caption{
+        	width: 400px;
+        	height: 240px;
+        	background: url('img/caption.png') no-repeat;
+        	opacity: 0;
+        	transition: all 1s;
+        }
+        .text .caption_rock{
+        	animation: rock 4s infinite;
+        }
+         .text .to{
+        	margin-top: 10px;
+         	width: 400px;
+         	opacity: 0;
+        	transition: all 1s 0.5s;
+        }
+        .text .msg{
+        	margin-top: 10px;
+        	width: 400px;
+        	opacity: 0;
+        	transition: all 1s 1s ;
+        }
+        .text  .from{
+        	margin-top: 10px;
+        	width: 400px;
+        	text-align: right;
+        	opacity: 0;
+        	transition: all 1s 1.5s;
+        }
+        .text_in .caption,.text_in .to,.text_in .msg,.text_in .from{
+        	opacity: 1;
+        }
+        @keyframes rock{
+        	0%{
+        		transform: rotate(0deg)
+        	}
+        	10%{
+        		transform: rotate(3deg)
+        	}
+        	20%{
+        		transform: rotate(-3deg)
+        	}
+        	30%{
+        		transform: rotate(2deg)
+        	}
+        	40%{
+        		transform: rotate(-2deg)
+        	}
+        	50%{
+        		transform: rotate(1deg)
+        	}
+        	60%{
+        		transform: rotate(-1deg)
+        	}
+        	70%{
+        		transform: rotate(0deg)
+        	}
+        	100%{
+        		transform: rotate(0deg);
+        	}
+        }
+        .c_zongzi_box_rock{
+        	animation: rock 2s infinite;
+        }
+        </style>
+    </head>
+    <body>
+    <div class="main">
+    	<div class="c_zongzi_box" id="c_zongzi_box">
+	    	<div class="c_zongzi" id="c_zongzi"></div>
+	    	<div class="c_sheng_1 " id="c_sheng"></div>
+	    	<div class="c_zongrou" id="c_zongrou"></div>
+	    	<div class="c_zuoye" id="c_zuoye"></div>
+	    	<div class="c_youye" id="c_youye"></div>
+	    	<div class="c_diye" id="c_diye"></div>
+	    	<div class="c_text_1" id="c_text_1"></div>
+	    	<div class="c_text_2" id="c_text_2"></div>
+    	</div>
+    	<div class="text" id="text">
+    		<div class="caption" id="caption"></div>
+    		<div class="to">优逸客小伙伴们</div>
+    		<div class="msg">端午快乐记得写作业端午快乐记得写作业端午快乐记得写作业</div>
+    		<div class="from">小玺</div>
+    	</div>
+    </div>
+    </body>
+    <script>
+    var g=function(id){
+    	return document.getElementById(id);
+    }
+    	var TimeLine=function(){
+    		this.order=[];//时间序列
+    		this.add=function(timeout,func,log){
+    			this.order.push({
+    				timeout:timeout,
+    				func:func,
+    				log:log,
+    			})
+    		}
+    		this.start=function(){
+    			for(s in this.order){
+    				(function(me){ //闭包函数
+                        var fn=me.func;
+                        var timeout=me.timeout;
+                        var log=me.log;
+                        setTimeout(fn, timeout);
+    				})(this.order[s]);
+    			}
+    		}
+    	}
+    	var s1=new TimeLine(); //初始场景
+ 		var s2=new TimeLine(); //粽子展开场景
+ 		var s3=new TimeLine(); //粽子旋转场景
+ 		s1.add(1,function(){
+ 			g('c_zongzi_box').className='c_zongzi_box c_zongzi_box_rock';
+ 			g('c_sheng').onclick=function(){
+ 				s2.start();
+ 				g('c_sheng').onclick=function(){}	
+ 			}
+ 		})
+ 		//粽子展开动画
+ 		s2.add(1,function(){
+ 			g('c_zongzi_box').className='c_zongzi_box';
+ 			g('text').className='text text_in';
+ 		})
+ 		s2.add(100,function(){
+ 			g('c_sheng').className='c_sheng_2';
+ 		})
+ 		s2.add(500,function(){
+ 			g('c_sheng').className='c_sheng_3';
+ 		})
+ 		s2.add(1000,function(){
+ 			g('c_sheng').className='c_sheng_4';
+ 			g('caption').className='caption caption_rock';
+ 		})
+ 		s2.add(1500,function(){
+ 			g('c_sheng').className='c_sheng_0';
+ 		})
+ 		s2.add(2000,function(){
+ 			g('c_zongzi').className='c_zongzi c_zongzi_out';
+ 			g('c_zongrou').className='c_zongrou c_zongrou_in';
+ 			g('c_zuoye').className='c_zuoye c_zuoye_in';
+ 			g('c_youye').className='c_youye c_youye_in';
+ 			g('c_text_1').className='c_text_1 c_text_in';
+ 			g('c_text_2').className='c_text_2 c_text_mirror_0';
+ 		})
+ 		s2.add(3000,function(){
+ 			g('c_zuoye').className='c_zuoye c_zuoye_in c_zuoye_out';
+ 			g('c_youye').className='c_youye c_youye_in c_youye_out';
+ 			g('c_diye').className='c_diye c_diye_in';
+ 			s3.start();
+ 		})
+ 		//粽肉肉托盘旋转动画定义
+ 		s3.add(1000,function(){
+ 			g('c_zongrou').className='c_zongrou c_zongrou_in c_zongrou_view_1';
+ 		});
+ 		s3.add(1200,function(){
+ 			g('c_zongrou').className='c_zongrou c_zongrou_in c_zongrou_view_2';
+ 			g('c_text_1').className='c_text_1 c_text_in c_text_view_2';
+ 			g('c_text_2').className='c_text_2 c_text_in c_text_mirror_2';
+ 		});
+ 		s3.add(1400,function(){
+ 			g('c_zongrou').className='c_zongrou c_zongrou_in c_zongrou_view_3';
+ 			g('c_text_1').className='c_text_1 c_text_in c_text_view_3';
+ 			g('c_text_2').className='c_text_2 c_text_in c_text_mirror_3';
+ 		});
+ 		s3.add(1600,function(){
+ 			g('c_zongrou').className='c_zongrou c_zongrou_in c_zongrou_view_4';
+ 			g('c_text_1').className='c_text_1 c_text_in c_text_view_4';
+ 			g('c_text_2').className='c_text_2 c_text_in c_text_mirror_4';
+ 		});
+ 		s3.add(1800,function(){
+ 			g('c_zongrou').className='c_zongrou c_zongrou_in c_zongrou_view_0';
+ 			g('c_text_1').className='c_text_1 c_text_in c_text_mirror_0';
+ 			g('c_text_2').className='c_text_2 c_text_in c_text_view_0';
+ 		});
+ 		s3.add(3000,function(){
+ 			g('c_zongrou').className='c_zongrou c_zongrou_in c_zongrou_view_4';
+ 			g('c_text_1').className='c_text_1 c_text_in c_text_view_4';
+ 			g('c_text_2').className='c_text_2 c_text_in c_text_mirror_4';
+ 		});
+ 		s3.add(3200,function(){
+ 			g('c_zongrou').className='c_zongrou c_zongrou_in c_zongrou_view_3';
+ 			g('c_text_1').className='c_text_1 c_text_in c_text_view_3';
+ 			g('c_text_2').className='c_text_2 c_text_in c_text_mirror_3';
+ 		});
+ 		s3.add(3400,function(){
+ 			g('c_zongrou').className='c_zongrou c_zongrou_in c_zongrou_view_2';
+ 			g('c_text_1').className='c_text_1 c_text_in c_text_view_2';
+ 			g('c_text_2').className='c_text_2 c_text_in c_text_mirror_2';
+ 		});
+ 		s3.add(3600,function(){
+ 			g('c_zongrou').className='c_zongrou c_zongrou_in c_zongrou_view_1';
+ 			g('c_text_1').className='c_text_1 c_text_in c_text_view_0';
+ 			g('c_text_2').className='c_text_2 c_text_in c_text_mirror_0';
+ 		});
+ 		//图片加载器
+ 		var imgs=['img/zzr_1.png','img/zzr_2.png','img/zzr_3.png','img/zzr_4.png'];//定义图片地址序列
+ 		var imgs_onload=function(){ //循环加载图片,并设置onload回调
+ 			imgs.pop();
+ 			if(imgs.length==0){
+ 				s1.start(); //检查图片是否全部加载完毕
+ 			}
+ 		}
+ 		for(s in imgs){ //加载每一个图片
+ 			var img=new Image;//脚本里面创建图片
+ 			img.onload=imgs_onload;//设置图片回调
+ 			img.src=imgs[s];
+ 		}
+    	s1.start();
+    	//图片加载需要时间  所以开始会闪 所以需要做图片加载器 让图片先预加载
+    </script>
+</html>
